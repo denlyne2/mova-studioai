@@ -1,23 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<script>
-(function() {
-  window.userbirdq = window.userbirdq || [];
-  window.USERBIRD_SITE_ID = 'tiqzjiSl';
-  var script = document.createElement('script');
-  script.defer = true;
-  script.setAttribute('data-site', window.USERBIRD_SITE_ID);
-  script.src = "https://cdn.userbird.com/analytics.min.js";
-  var currentScript = document.currentScript || document.getElementsByTagName('script')[0];
-  currentScript.parentNode.insertBefore(script, currentScript);
-})();
-</script>
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MOVA STUDIO – AI Tools</title>
+  <title>MOVA STUDIO – AI Tools Directory</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { font-family: sans-serif; }
@@ -47,6 +33,16 @@
       font-weight: bold;
       cursor: pointer;
     }
+    .article-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      background-color: #1a202c;
+      border-radius: 0 0 8px 8px;
+    }
+    .tool-card.active {
+      border-bottom: 2px solid #4fd1c5;
+    }
   </style>
 </head>
 <body class="bg-black text-white">
@@ -54,9 +50,9 @@
   <header class="bg-gray-900 p-4 shadow-md sticky top-0 z-50">
     <div class="container mx-auto flex justify-between items-center">
       <div class="flex items-center gap-2">
-  <img src="https://uploads.onecompiler.io/43n93p28n/43n93dtdt/MOVASTUDIO.png" alt="MOVA STUDIO Logo" class="w-10 h-10 rounded-full">
-  <h1 class="text-xl font-bold text-teal-400">MOVA STUDIO</h1>
-</div>
+        <img src="https://uploads.onecompiler.io/43n93p28n/43n93dtdt/MOVASTUDIO.png" alt="MOVA STUDIO Logo" class="w-10 h-10 rounded-full">
+        <h1 class="text-xl font-bold text-teal-400">MOVA STUDIO</h1>
+      </div>
       <nav class="space-x-4 text-gray-300 text-sm">
         <a href="#home" class="hover:text-white">Home</a>
         <a href="#tools" class="hover:text-white">Tools</a>
@@ -68,22 +64,22 @@
   </header>
 
   <!-- Home Section -->
-<section id="home" class="py-20 text-center bg-black px-4">
-  <div class="overflow-hidden whitespace-nowrap text-4xl font-bold text-green-400 animate-slide">
-    <span class="inline-block px-4">Welcome to MOVA STUDIO — your all-in-one AI web made by JOSHUA NEWTON</span>
-  </div>
-  <h2 class="text-3xl font-bold mt-8 mb-4 text-white">Welcome to MOVA STUDIO</h2>
-  <p class="text-gray-400">Your ultimate directory to discover the best AI tools and how they work.<br>YOU DESERVE BETTER.</p>
-</section>
-<style>
-@keyframes slideText {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-.animate-slide {
-  animation: slideText 15s linear infinite;
-}
-</style>
+  <section id="home" class="py-20 text-center bg-black px-4">
+    <div class="overflow-hidden whitespace-nowrap text-4xl font-bold text-green-400 animate-slide">
+      <span class="inline-block px-4">Welcome to MOVA STUDIO — your all-in-one AI web made by JOSHUA NEWTON</span>
+    </div>
+    <h2 class="text-3xl font-bold mt-8 mb-4 text-white">Welcome to MOVA STUDIO</h2>
+    <p class="text-gray-400">Your ultimate directory to discover the best AI tools and how they work.<br>YOU DESERVE BETTER.</p>
+  </section>
+  <style>
+    @keyframes slideText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .animate-slide {
+      animation: slideText 15s linear infinite;
+    }
+  </style>
 
   <!-- Search Bar -->
   <section class="bg-gray-800 py-6 px-4">
@@ -104,116 +100,505 @@
   </section>
 
   <section id="tools" class="py-16 bg-black px-4">
-  <div class="container mx-auto">
-    <h3 class="text-3xl font-semibold text-center mb-8">Featured AI Tools</h3>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Tool Cards -->
-      <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="chat">
-        <h4 class="text-xl font-bold text-teal-300">ChatGPT</h4>
-        <p class="text-gray-300">Advanced chatbot by OpenAI for conversations and problem-solving.</p>
-        <a href="https://chat.openai.com" target="_blank" class="hidden">Link</a>
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-semibold text-center mb-8">Featured AI Tools</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- ChatGPT -->
+        <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="chat">
+          <div class="flex justify-between items-center">
+            <h4 class="text-xl font-bold text-teal-300">ChatGPT</h4>
+            <button class="expand-btn text-teal-400 font-bold">+</button>
+          </div>
+          <p class="text-gray-300">Advanced chatbot by OpenAI for conversations and problem-solving.</p>
+          <a href="https://chat.openai.com" target="_blank" class="hidden">Link</a>
+          <div class="article-content">
+            <div class="mt-4 p-4">
+              <h5 class="font-bold text-lg mb-2">Complete Guide to ChatGPT</h5>
+              <p><strong>Introduction:</strong> ChatGPT is OpenAI's conversational AI that assists with answering questions, generating text, and coding help.</p>
+              <p class="mt-2"><strong>Key Features:</strong></p>
+              <ul class="list-disc pl-5">
+                <li>Natural language processing for human-like conversations</li>
+                <li>Code debugging and explanation capabilities</li>
+                <li>Content generation (emails, essays, scripts)</li>
+                <li>Multilingual support</li>
+              </ul>
+              <p class="mt-2"><strong>How to Use:</strong></p>
+              <ol class="list-decimal pl-5">
+                <li>Go to chat.openai.com and sign up</li>
+                <li>Choose between free (GPT-3.5) or Plus (GPT-4, $20/month)</li>
+                <li>Type your question in the chatbox</li>
+                <li>Refine responses with follow-up questions</li>
+              </ol>
+              <p class="mt-2"><strong>Pricing:</strong> Free tier available, Plus is $20/month</p>
+              <p><strong>Best for:</strong> Students, developers, content creators</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Midjourney -->
+        <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="image">
+          <div class="flex justify-between items-center">
+            <h4 class="text-xl font-bold text-teal-300">Midjourney</h4>
+            <button class="expand-btn text-teal-400 font-bold">+</button>
+          </div>
+          <p class="text-gray-300">AI tool that turns text prompts into stunning images.</p>
+          <a href="https://www.midjourney.com" target="_blank" class="hidden">Link</a>
+          <div class="article-content">
+            <div class="mt-4 p-4">
+              <h5 class="font-bold text-lg mb-2">Complete Guide to Midjourney</h5>
+              <p><strong>Introduction:</strong> Midjourney generates high-quality digital art from text prompts.</p>
+              <p class="mt-2"><strong>Key Features:</strong></p>
+              <ul class="list-disc pl-5">
+                <li>Transforms text into detailed images</li>
+                <li>Multiple art styles (realistic, anime, cyberpunk)</li>
+                <li>Customizable resolution and aspect ratios</li>
+              </ul>
+              <p class="mt-2"><strong>How to Use:</strong></p>
+              <ol class="list-decimal pl-5">
+                <li>Join Midjourney's Discord server</li>
+                <li>Subscribe ($10-$120/month)</li>
+                <li>Type "/imagine [your prompt]" in a bot channel</li>
+                <li>Use "Upscale" or "Vary" to refine results</li>
+              </ol>
+              <p class="mt-2"><strong>Pricing:</strong> Starts at $10/month</p>
+              <p><strong>Best for:</strong> Concept artists, social media creators</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jasper -->
+        <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="writing">
+          <div class="flex justify-between items-center">
+            <h4 class="text-xl font-bold text-teal-300">Jasper</h4>
+            <button class="expand-btn text-teal-400 font-bold">+</button>
+          </div>
+          <p class="text-gray-300">AI writing assistant for blogs, ads, and more.</p>
+          <a href="https://www.jasper.ai" target="_blank" class="hidden">Link</a>
+          <div class="article-content">
+            <div class="mt-4 p-4">
+              <h5 class="font-bold text-lg mb-2">Complete Guide to Jasper</h5>
+              <p><strong>Introduction:</strong> Jasper helps generate marketing copy, blog posts, and ad scripts.</p>
+              <p class="mt-2"><strong>Key Features:</strong></p>
+              <ul class="list-disc pl-5">
+                <li>50+ templates for different content types</li>
+                <li>SEO optimization tools</li>
+                <li>Multi-language support</li>
+              </ul>
+              <p class="mt-2"><strong>How to Use:</strong></p>
+              <ol class="list-decimal pl-5">
+                <li>Sign up at Jasper.ai</li>
+                <li>Select a template (blog post, ad copy, etc.)</li>
+                <li>Input topic, tone, and keywords</li>
+                <li>Generate and refine the output</li>
+              </ol>
+              <p class="mt-2"><strong>Pricing:</strong> Starts at $49/month</p>
+              <p><strong>Best for:</strong> Marketers, bloggers, e-commerce</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pictory -->
+        <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="video">
+          <div class="flex justify-between items-center">
+            <h4 class="text-xl font-bold text-teal-300">Pictory</h4>
+            <button class="expand-btn text-teal-400 font-bold">+</button>
+          </div>
+          <p class="text-gray-300">Create short videos from long content using AI.</p>
+          <a href="https://pictory.ai" target="_blank" class="hidden">Link</a>
+          <div class="article-content">
+            <div class="mt-4 p-4">
+              <h5 class="font-bold text-lg mb-2">Complete Guide to Pictory</h5>
+              <p><strong>Introduction:</strong> Pictory transforms long-form content into engaging short videos.</p>
+              <p class="mt-2"><strong>Key Features:</strong></p>
+              <ul class="list-disc pl-5">
+                <li>Automatically creates videos from text</li>
+                <li>Adds captions and stock footage</li>
+                <li>Edits videos based on transcripts</li>
+              </ul>
+              <p class="mt-2"><strong>How to Use:</strong></p>
+              <ol class="list-decimal pl-5">
+                <li>Sign up at Pictory.ai</li>
+                <li>Upload a script or paste text</li>
+                <li>Select a style and edit the AI-generated video</li>
+                <li>Export in various formats</li>
+              </ol>
+              <p class="mt-2"><strong>Pricing:</strong> Starts at $19/month</p>
+              <p><strong>Best for:</strong> Content marketers, educators</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soundraw -->
+        <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="music">
+          <div class="flex justify-between items-center">
+            <h4 class="text-xl font-bold text-teal-300">Soundraw</h4>
+            <button class="expand-btn text-teal-400 font-bold">+</button>
+          </div>
+          <p class="text-gray-300">Generate custom royalty-free music with AI.</p>
+          <a href="https://soundraw.io" target="_blank" class="hidden">Link</a>
+          <div class="article-content">
+            <div class="mt-4 p-4">
+              <h5 class="font-bold text-lg mb-2">Complete Guide to Soundraw</h5>
+              <p><strong>Introduction:</strong> Soundraw creates custom, royalty-free music tracks using AI.</p>
+              <p class="mt-2"><strong>Key Features:</strong></p>
+              <ul class="list-disc pl-5">
+                <li>Generates unique music based on mood/genre</li>
+                <li>Customizable length and instruments</li>
+                <li>Royalty-free for commercial use</li>
+              </ul>
+              <p class="mt-2"><strong>How to Use:</strong></p>
+              <ol class="list-decimal pl-5">
+                <li>Visit Soundraw.io and create an account</li>
+                <li>Select genre, mood, and length</li>
+                <li>Customize instruments and structure</li>
+                <li>Download the final track</li>
+              </ol>
+              <p class="mt-2"><strong>Pricing:</strong> Free plan available, paid from $16.99/month</p>
+              <p><strong>Best for:</strong> Video creators, podcasters, game developers</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beautiful.ai -->
+        <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="presentation">
+          <div class="flex justify-between items-center">
+            <h4 class="text-xl font-bold text-teal-300">Beautiful.ai</h4>
+            <button class="expand-btn text-teal-400 font-bold">+</button>
+          </div>
+          <p class="text-gray-300">AI presentation maker that automates slide design.</p>
+          <a href="https://www.beautiful.ai" target="_blank" class="hidden">Link</a>
+          <div class="article-content">
+            <div class="mt-4 p-4">
+              <h5 class="font-bold text-lg mb-2">Complete Guide to Beautiful.ai</h5>
+              <p><strong>Introduction:</strong> Beautiful.ai creates professional presentations with automated design.</p>
+              <p class="mt-2"><strong>Key Features:</strong></p>
+              <ul class="list-disc pl-5">
+                <li>Smart templates that auto-adjust</li>
+                <li>Real-time design adaptation</li>
+                <li>Team collaboration features</li>
+              </ul>
+              <p class="mt-2"><strong>How to Use:</strong></p>
+              <ol class="list-decimal pl-5">
+                <li>Sign up at Beautiful.ai</li>
+                <li>Choose a template or start blank</li>
+                <li>Add content - slides auto-format</li>
+                <li>Share or export your presentation</li>
+              </ol>
+              <p class="mt-2"><strong>Pricing:</strong> Free trial, paid plans from $12/month</p>
+              <p><strong>Best for:</strong> Business professionals, educators</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Claude -->
+        <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="chat">
+          <div class="flex justify-between items-center">
+            <h4 class="text-xl font-bold text-teal-300">Claude</h4>
+            <button class="expand-btn text-teal-400 font-bold">+</button>
+          </div>
+          <p class="text-gray-300">Conversational AI by Anthropic with a focus on safety.</p>
+          <a href="https://www.anthropic.com/index/claude" target="_blank" class="hidden">Link</a>
+          <div class="article-content">
+            <div class="mt-4 p-4">
+              <h5 class="font-bold text-lg mb-2">Complete Guide to Claude</h5>
+              <p><strong>Introduction:</strong> Claude is an AI assistant focused on helpful, harmless, and honest responses.</p>
+              <p class="mt-2"><strong>Key Features:</strong></p>
+              <ul class="list-disc pl-5">
+                <li>Conversational AI with safety constraints</li>
+                <li>Document analysis capabilities</li>
+                <li>Longer context memory than most chatbots</li>
+              </ul>
+              <p class="mt-2"><strong>How to Use:</strong></p>
+              <ol class="list-decimal pl-5">
+                <li>Access through Anthropic's website or API</li>
+                <li>Type your question or upload documents</li>
+                <li>Get detailed, thoughtful responses</li>
+                <li>Use follow-up questions for clarification</li>
+              </ol>
+              <p class="mt-2"><strong>Pricing:</strong> Free tier available, Pro version coming soon</p>
+              <p><strong>Best for:</strong> Research, content analysis, ethical AI use</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- GitHub Copilot -->
+        <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="coding">
+          <div class="flex justify-between items-center">
+            <h4 class="text-xl font-bold text-teal-300">GitHub Copilot</h4>
+            <button class="expand-btn text-teal-400 font-bold">+</button>
+          </div>
+          <p class="text-gray-300">AI code assistant by GitHub and OpenAI for developers.</p>
+          <a href="https://github.com/features/copilot" target="_blank" class="hidden">Link</a>
+          <div class="article-content">
+            <div class="mt-4 p-4">
+              <h5 class="font-bold text-lg mb-2">Complete Guide to GitHub Copilot</h5>
+              <p><strong>Introduction:</strong> Copilot suggests code and functions in real-time as you work.</p>
+              <p class="mt-2"><strong>Key Features:</strong></p>
+              <ul class="list-disc pl-5">
+                <li>Real-time code suggestions</li>
+                <li>Support for multiple programming languages</li>
+                <li>Integration with popular IDEs</li>
+              </ul>
+              <p class="mt-2"><strong>How to Use:</strong></p>
+              <ol class="list-decimal pl-5">
+                <li>Install the Copilot extension in your IDE</li>
+                <li>Start typing code - suggestions appear automatically</li>
+                <li>Accept suggestions with Tab key</li>
+                <li>Use comments to guide the AI's suggestions</li>
+              </ol>
+              <p class="mt-2"><strong>Pricing:</strong> $10/month for individuals</p>
+              <p><strong>Best for:</strong> Software developers, data scientists</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Runway ML -->
+        <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="image">
+          <div class="flex justify-between items-center">
+            <h4 class="text-xl font-bold text-teal-300">Runway ML</h4>
+            <button class="expand-btn text-teal-400 font-bold">+</button>
+          </div>
+          <p class="text-gray-300">AI for creatives—video editing, image generation, and more.</p>
+          <a href="https://runwayml.com" target="_blank" class="hidden">Link</a>
+          <div class="article-content">
+            <div class="mt-4 p-4">
+              <h5 class="font-bold text-lg mb-2">Complete Guide to Runway ML</h5>
+              <p><strong>Introduction:</strong> Runway offers 30+ AI tools for creative projects.</p>
+              <p class="mt-2"><strong>Key Features:</strong></p>
+              <ul class="list-disc pl-5">
+                <li>Video editing with AI tools</li>
+                <li>Image generation and manipulation</li>
+                <li>3D texture generation</li>
+              </ul>
+              <p class="mt-2"><strong>How to Use:</strong></p>
+              <ol class="list-decimal pl-5">
+                <li>Sign up at RunwayML.com</li>
+                <li>Choose a tool from their library</li>
+                <li>Upload media or start from scratch</li>
+                <li>Process and download results</li>
+              </ol>
+              <p class="mt-2"><strong>Pricing:</strong> Free tier available, paid plans from $15/month</p>
+              <p><strong>Best for:</strong> Video editors, graphic designers</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notion AI -->
+        <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="productivity">
+          <div class="flex justify-between items-center">
+            <h4 class="text-xl font-bold text-teal-300">Notion AI</h4>
+            <button class="expand-btn text-teal-400 font-bold">+</button>
+          </div>
+          <p class="text-gray-300">Write, brainstorm, and summarize directly in Notion.</p>
+          <a href="https://www.notion.so/product/ai" target="_blank" class="hidden">Link</a>
+          <div class="article-content">
+            <div class="mt-4 p-4">
+              <h5 class="font-bold text-lg mb-2">Complete Guide to Notion AI</h5>
+              <p><strong>Introduction:</strong> AI-powered writing and organization within Notion.</p>
+              <p class="mt-2"><strong>Key Features:</strong></p>
+              <ul class="list-disc pl-5">
+                <li>Content generation within notes</li>
+                <li>Meeting summaries and action items</li>
+                <li>Database organization assistance</li>
+              </ul>
+              <p class="mt-2"><strong>How to Use:</strong></p>
+              <ol class="list-decimal pl-5">
+                <li>Open any Notion page</li>
+                <li>Type "/ai" or spacebar to activate AI</li>
+                <li>Choose from suggested actions or type your own</li>
+                <li>Edit the generated content as needed</li>
+              </ol>
+              <p class="mt-2"><strong>Pricing:</strong> $8/month added to existing Notion plans</p>
+              <p><strong>Best for:</strong> Teams, personal knowledge management</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copy.ai -->
+        <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="writing">
+          <div class="flex justify-between items-center">
+            <h4 class="text-xl font-bold text-teal-300">Copy.ai</h4>
+            <button class="expand-btn text-teal-400 font-bold">+</button>
+          </div>
+          <p class="text-gray-300">AI copywriting tool to write better marketing content.</p>
+          <a href="https://www.copy.ai" target="_blank" class="hidden">Link</a>
+          <div class="article-content">
+            <div class="mt-4 p-4">
+              <h5 class="font-bold text-lg mb-2">Complete Guide to Copy.ai</h5>
+              <p><strong>Introduction:</strong> Copy.ai specializes in marketing copy generation.</p>
+              <p class="mt-2"><strong>Key Features:</strong></p>
+              <ul class="list-disc pl-5">
+                <li>90+ templates for different marketing needs</li>
+                <li>Brand voice customization</li>
+                <li>Content improvement suggestions</li>
+              </ul>
+              <p class="mt-2"><strong>How to Use:</strong></p>
+              <ol class="list-decimal pl-5">
+                <li>Sign up at Copy.ai</li>
+                <li>Select a content type (ads, emails, etc.)</li>
+                <li>Input product details and tone</li>
+                <li>Generate and refine multiple versions</li>
+              </ol>
+              <p class="mt-2"><strong>Pricing:</strong> Free plan available, Pro from $49/month</p>
+              <p><strong>Best for:</strong> Marketers, small business owners</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Synthesia -->
+        <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="video">
+          <div class="flex justify-between items-center">
+            <h4 class="text-xl font-bold text-teal-300">Synthesia</h4>
+            <button class="expand-btn text-teal-400 font-bold">+</button>
+          </div>
+          <p class="text-gray-300">Create AI-generated videos with avatars and voiceovers.</p>
+          <a href="https://www.synthesia.io" target="_blank" class="hidden">Link</a>
+          <div class="article-content">
+            <div class="mt-4 p-4">
+              <h5 class="font-bold text-lg mb-2">Complete Guide to Synthesia</h5>
+              <p><strong>Introduction:</strong> Synthesia creates videos with AI avatars from text.</p>
+              <p class="mt-2"><strong>Key Features:</strong></p>
+              <ul class="list-disc pl-5">
+                <li>140+ AI avatars to choose from</li>
+                <li>120+ languages and accents</li>
+                <li>No filming or voice recording needed</li>
+              </ul>
+              <p class="mt-2"><strong>How to Use:</strong></p>
+              <ol class="list-decimal pl-5">
+                <li>Create an account at Synthesia.io</li>
+                <li>Choose an avatar and voice</li>
+                <li>Type or paste your script</li>
+                <li>Generate and download the video</li>
+              </ol>
+              <p class="mt-2"><strong>Pricing:</strong> Starts at $30/month</p>
+              <p><strong>Best for:</strong> Corporate training, explainer videos</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Perplexity -->
+        <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="chat">
+          <div class="flex justify-between items-center">
+            <h4 class="text-xl font-bold text-teal-300">Perplexity</h4>
+            <button class="expand-btn text-teal-400 font-bold">+</button>
+          </div>
+          <p class="text-gray-300">AI-powered research assistant that cites sources.</p>
+          <a href="https://www.perplexity.ai" target="_blank" class="hidden">Link</a>
+          <div class="article-content">
+            <div class="mt-4 p-4">
+              <h5 class="font-bold text-lg mb-2">Complete Guide to Perplexity</h5>
+              <p><strong>Introduction:</strong> Perplexity provides sourced answers to complex questions.</p>
+              <p class="mt-2"><strong>Key Features:</strong></p>
+              <ul class="list-disc pl-5">
+                <li>Answers with cited sources</li>
+                <li>Follow-up question capability</li>
+                <li>Web search integration</li>
+              </ul>
+              <p class="mt-2"><strong>How to Use:</strong></p>
+              <ol class="list-decimal pl-5">
+                <li>Visit Perplexity.ai</li>
+                <li>Type your research question</li>
+                <li>Review the answer with sources</li>
+                <li>Ask follow-ups for more depth</li>
+              </ol>
+              <p class="mt-2"><strong>Pricing:</strong> Free version available, Pro at $20/month</p>
+              <p><strong>Best for:</strong> Researchers, students, fact-checking</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leonardo AI -->
+        <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="image">
+          <div class="flex justify-between items-center">
+            <h4 class="text-xl font-bold text-teal-300">Leonardo AI</h4>
+            <button class="expand-btn text-teal-400 font-bold">+</button>
+          </div>
+          <p class="text-gray-300">Generate amazing images for games, design, and more.</p>
+          <a href="https://leonardo.ai" target="_blank" class="hidden">Link</a>
+          <div class="article-content">
+            <div class="mt-4 p-4">
+              <h5 class="font-bold text-lg mb-2">Complete Guide to Leonardo AI</h5>
+              <p><strong>Introduction:</strong> Leonardo specializes in game assets and design elements.</p>
+              <p class="mt-2"><strong>Key Features:</strong></p>
+              <ul class="list-disc pl-5">
+                <li>Texture and element generation</li>
+                <li>3D model creation</li>
+                <li>Style-consistent image sets</li>
+              </ul>
+              <p class="mt-2"><strong>How to Use:</strong></p>
+              <ol class="list-decimal pl-5">
+                <li>Sign up at Leonardo.ai</li>
+                <li>Choose a model or upload reference images</li>
+                <li>Generate variations</li>
+                <li>Download assets for your project</li>
+              </ol>
+              <p class="mt-2"><strong>Pricing:</strong> Free tier available, paid plans from $10/month</p>
+              <p><strong>Best for:</strong> Game developers, 3D artists</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Boomy -->
+        <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="music">
+          <div class="flex justify-between items-center">
+            <h4 class="text-xl font-bold text-teal-300">Boomy</h4>
+            <button class="expand-btn text-teal-400 font-bold">+</button>
+          </div>
+          <p class="text-gray-300">Make original music and publish it—no experience needed.</p>
+          <a href="https://boomy.com" target="_blank" class="hidden">Link</a>
+          <div class="article-content">
+            <div class="mt-4 p-4">
+              <h5 class="font-bold text-lg mb-2">Complete Guide to Boomy</h5>
+              <p><strong>Introduction:</strong> Boomy lets anyone create original songs in seconds.</p>
+              <p class="mt-2"><strong>Key Features:</strong></p>
+              <ul class="list-disc pl-5">
+                <li>One-click song generation</li>
+                <li>Customizable beats and melodies</li>
+                <li>Publishing to streaming platforms</li>
+              </ul>
+              <p class="mt-2"><strong>How to Use:</strong></p>
+              <ol class="list-decimal pl-5">
+                <li>Visit Boomy.com and create an account</li>
+                <li>Choose a style and generate a song</li>
+                <li>Customize elements as needed</li>
+                <li>Save or publish your track</li>
+              </ol>
+              <p class="mt-2"><strong>Pricing:</strong> Free version available, premium at $9.99/month</p>
+              <p><strong>Best for:</strong> Content creators, musicians</p>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="image">
-        <h4 class="text-xl font-bold text-teal-300">Midjourney</h4>
-        <p class="text-gray-300">AI tool that turns text prompts into stunning images.</p>
-        <a href="https://www.midjourney.com" target="_blank" class="hidden">Link</a>
-      </div>
-      <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="writing">
-        <h4 class="text-xl font-bold text-teal-300">Jasper</h4>
-        <p class="text-gray-300">AI writing assistant for blogs, ads, and more.</p>
-        <a href="https://www.jasper.ai" target="_blank" class="hidden">Link</a>
-      </div>
-      <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="video">
-        <h4 class="text-xl font-bold text-teal-300">Pictory</h4>
-        <p class="text-gray-300">Create short videos from long content using AI.</p>
-        <a href="https://pictory.ai" target="_blank" class="hidden">Link</a>
-      </div>
-      <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="music">
-        <h4 class="text-xl font-bold text-teal-300">Soundraw</h4>
-        <p class="text-gray-300">Generate custom royalty-free music with AI.</p>
-        <a href="https://soundraw.io" target="_blank" class="hidden">Link</a>
-      </div>
-      <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="presentation">
-        <h4 class="text-xl font-bold text-teal-300">Beautiful.ai</h4>
-        <p class="text-gray-300">AI presentation maker that automates slide design.</p>
-        <a href="https://www.beautiful.ai" target="_blank" class="hidden">Link</a>
-      </div>
-      <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="chat">
-        <h4 class="text-xl font-bold text-teal-300">Claude</h4>
-        <p class="text-gray-300">Conversational AI by Anthropic with a focus on safety.</p>
-        <a href="https://www.anthropic.com/index/claude" target="_blank" class="hidden">Link</a>
-      </div>
-      <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="coding">
-        <h4 class="text-xl font-bold text-teal-300">GitHub Copilot</h4>
-        <p class="text-gray-300">AI code assistant by GitHub and OpenAI for developers.</p>
-        <a href="https://github.com/features/copilot" target="_blank" class="hidden">Link</a>
-      </div>
-      <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="image">
-        <h4 class="text-xl font-bold text-teal-300">Runway ML</h4>
-        <p class="text-gray-300">AI for creatives—video editing, image generation, and more.</p>
-        <a href="https://runwayml.com" target="_blank" class="hidden">Link</a>
-      </div>
-      <!-- Add 20 more tools here to reach 29 -->
-      <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="productivity">
-        <h4 class="text-xl font-bold text-teal-300">Notion AI</h4>
-        <p class="text-gray-300">Write, brainstorm, and summarize directly in Notion.</p>
-        <a href="https://www.notion.so/product/ai" target="_blank" class="hidden">Link</a>
-      </div>
-      <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="writing">
-        <h4 class="text-xl font-bold text-teal-300">Copy.ai</h4>
-        <p class="text-gray-300">AI copywriting tool to write better marketing content.</p>
-        <a href="https://www.copy.ai" target="_blank" class="hidden">Link</a>
-      </div>
-      <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="video">
-        <h4 class="text-xl font-bold text-teal-300">Synthesia</h4>
-        <p class="text-gray-300">Create AI-generated videos with avatars and voiceovers.</p>
-        <a href="https://www.synthesia.io" target="_blank" class="hidden">Link</a>
-      </div>
-      <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="chat">
-        <h4 class="text-xl font-bold text-teal-300">Perplexity</h4>
-        <p class="text-gray-300">AI-powered research assistant that cites sources.</p>
-        <a href="https://www.perplexity.ai" target="_blank" class="hidden">Link</a>
-      </div>
-      <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="image">
-        <h4 class="text-xl font-bold text-teal-300">Leonardo AI</h4>
-        <p class="text-gray-300">Generate amazing images for games, design, and more.</p>
-        <a href="https://leonardo.ai" target="_blank" class="hidden">Link</a>
-      </div>
-      <div class="tool-card bg-gray-800 p-4 rounded cursor-pointer" data-category="music">
-        <h4 class="text-xl font-bold text-teal-300">Boomy</h4>
-        <p class="text-gray-300">Make original music and publish it—no experience needed.</p>
-        <a href="https://boomy.com" target="_blank" class="hidden">Link</a>
-      </div>
-      <!-- Continue adding remaining tools if needed -->
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Articles Section -->
-<section id="articles" class="py-16 bg-gray-900 px-4">
-  <div class="container mx-auto text-center">
-    <h3 class="text-3xl font-semibold mb-4">Articles & Tutorials</h3>
-    <p class="text-gray-400 mb-6">Learn how to use AI tools, discover trends, and compare options.</p>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-      <a href="articles/getting-started.html" class="block bg-gray-700 rounded-xl p-4 hover:bg-gray-600">
-        <h4 class="text-xl font-semibold text-teal-300">Getting Started with AI Tools</h4>
-        <p class="text-gray-300 text-sm">A beginner’s guide to navigating and using AI tools on MOVA STUDIO.</p>
-      </a>
-      <a href="articles/best-ai-creators.html" class="block bg-gray-700 rounded-xl p-4 hover:bg-gray-600">
-        <h4 class="text-xl font-semibold text-teal-300">Best AI for Creators</h4>
-        <p class="text-gray-300 text-sm">Top AI tools for artists, writers, and content creators in 2025.</p>
-      </a>
-      <a href="articles/ai-tools-comparison.html" class="block bg-gray-700 rounded-xl p-4 hover:bg-gray-600">
-        <h4 class="text-xl font-semibold text-teal-300">AI Tools Comparison Guide</h4>
-        <p class="text-gray-300 text-sm">Side-by-side comparison of the most popular AI tools by category.</p>
-      </a>
-      <a href="articles/ai-for-business.html" class="block bg-gray-700 rounded-xl p-4 hover:bg-gray-600">
-        <h4 class="text-xl font-semibold text-teal-300">AI for Business Automation</h4>
-        <p class="text-gray-300 text-sm">Discover how to automate daily tasks using smart AI platforms.</p>
-      </a>
+  <section id="articles" class="py-16 bg-gray-900 px-4">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-4">Articles & Tutorials</h3>
+      <p class="text-gray-400 mb-6">Learn how to use AI tools, discover trends, and compare options.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <a href="articles/getting-started.html" class="block bg-gray-700 rounded-xl p-4 hover:bg-gray-600">
+          <h4 class="text-xl font-semibold text-teal-300">Getting Started with AI Tools</h4>
+          <p class="text-gray-300 text-sm">A beginner's guide to navigating and using AI tools on MOVA STUDIO.</p>
+        </a>
+        <a href="articles/best-ai-creators.html" class="block bg-gray-700 rounded-xl p-4 hover:bg-gray-600">
+          <h4 class="text-xl font-semibold text-teal-300">Best AI for Creators</h4>
+          <p class="text-gray-300 text-sm">Top AI tools for artists, writers, and content creators in 2025.</p>
+        </a>
+        <a href="articles/ai-tools-comparison.html" class="block bg-gray-700 rounded-xl p-4 hover:bg-gray-600">
+          <h4 class="text-xl font-semibold text-teal-300">AI Tools Comparison Guide</h4>
+          <p class="text-gray-300 text-sm">Side-by-side comparison of the most popular AI tools by category.</p>
+        </a>
+        <a href="articles/ai-for-business.html" class="block bg-gray-700 rounded-xl p-4 hover:bg-gray-600">
+          <h4 class="text-xl font-semibold text-teal-300">AI for Business Automation</h4>
+          <p class="text-gray-300 text-sm">Discover how to automate daily tasks using smart AI platforms.</p>
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Contact Section -->
   <section id="contact" class="py-16 bg-gray-800 px-4">
@@ -230,14 +615,14 @@
 
   <!-- Footer -->
   <section id="about" class="py-16 bg-gray-950 text-center px-4">
-  <div class="container mx-auto max-w-2xl">
-    <h3 class="text-3xl font-semibold mb-4">About MOVA STUDIO</h3>
-    <p class="text-gray-400 mb-4">MOVA STUDIO is a curated platform by <strong>Joshua Newton</strong> to showcase and guide users through the best AI tools available on the web.</p>
-    <p class="text-gray-500">Our mission is to make AI tools easy to find and simple to understand for everyone.</p>
-  </div>
-</section>
+    <div class="container mx-auto max-w-2xl">
+      <h3 class="text-3xl font-semibold mb-4">About MOVA STUDIO</h3>
+      <p class="text-gray-400 mb-4">MOVA STUDIO is a curated platform by <strong>Joshua Newton</strong> to showcase and guide users through the best AI tools available on the web.</p>
+      <p class="text-gray-500">Our mission is to make AI tools easy to find and simple to understand for everyone.</p>
+    </div>
+  </section>
 
-<footer class="bg-gray-950 text-center text-gray-400 py-6 text-sm">
+  <footer class="bg-gray-950 text-center text-gray-400 py-6 text-sm">
     <p>&copy; 2025 MOVA STUDIO. All rights reserved.</p>
   </footer>
 
@@ -251,8 +636,27 @@
     </div>
   </div>
 
-  <!-- Modal Script -->
+  <!-- Scripts -->
   <script>
+    // Expand/collapse articles
+    document.querySelectorAll('.expand-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = btn.closest('.tool-card');
+        const content = card.querySelector('.article-content');
+        
+        card.classList.toggle('active');
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          btn.textContent = '+';
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          btn.textContent = '-';
+        }
+      });
+    });
+
+    // Original modal script
     const modal = document.getElementById("toolModal");
     const modalTitle = document.getElementById("modalTitle");
     const modalDescription = document.getElementById("modalDescription");
@@ -260,23 +664,23 @@
     const closeModal = document.getElementById("modalClose");
 
     document.querySelectorAll(".tool-card").forEach(card => {
-      card.addEventListener("click", () => {
-        const title = card.querySelector("h4").innerText;
-        const desc = card.querySelector("p").innerText;
-        const link = card.querySelector("a").href;
-        modalTitle.innerText = title;
-        modalDescription.innerText = desc;
-        modalLink.href = link;
-        modal.style.display = "block";
+      card.addEventListener("click", (e) => {
+        if (!e.target.classList.contains('expand-btn')) {
+          const title = card.querySelector("h4").innerText;
+          const desc = card.querySelector("p").innerText;
+          const link = card.querySelector("a").href;
+          modalTitle.innerText = title;
+          modalDescription.innerText = desc;
+          modalLink.href = link;
+          modal.style.display = "block";
+        }
       });
     });
 
     closeModal.onclick = () => (modal.style.display = "none");
     window.onclick = e => { if (e.target == modal) modal.style.display = "none"; };
-  </script>
 
-  <!-- Filter Script -->
-  <script>
+    // Filter script
     const searchInput = document.getElementById('searchInput');
     const categoryFilter = document.getElementById('categoryFilter');
     const toolCards = document.querySelectorAll('.tool-card');
