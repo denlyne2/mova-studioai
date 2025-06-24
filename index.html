@@ -45,6 +45,63 @@
     .tool-card.active {
       border-bottom: 2px solid #4fd1c5;
     }
+    /* Tutorial specific styles */
+    .tutorial-section {
+      background-color: #111827;
+      color: #e5e7eb;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .tutorial-section h2 {
+      color: #4fd1c5;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #4fd1c5;
+      padding-bottom: 0.5rem;
+    }
+    .tutorial-section h3 {
+      color: #81e6d9;
+      font-size: 1.4rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+    .tutorial-section pre {
+      background-color: #1f2937;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+      color: #e5e7eb;
+      margin: 1rem 0;
+    }
+    .tutorial-section code {
+      background-color: #1f2937;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.3rem;
+      color: #e5e7eb;
+      font-family: 'Courier New', monospace;
+    }
+    .tutorial-section ul, .tutorial-section ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .tutorial-section li {
+      margin-bottom: 0.5rem;
+    }
+    .tutorial-note {
+      background-color: #1a365d;
+      border-left: 4px solid #4299e1;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+    .tutorial-warning {
+      background-color: #63171b;
+      border-left: 4px solid #f56565;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
   </style>
 </head>
 <body class="bg-black text-white">
@@ -59,6 +116,7 @@
         <a href="#home" class="hover:text-white">Home</a>
         <a href="#tools" class="hover:text-white">Tools</a>
         <a href="#articles" class="hover:text-white">Articles</a>
+        <a href="#tutorial" class="hover:text-white">Tutorial</a>
         <a href="#about" class="hover:text-white">About</a>
         <a href="#contact" class="hover:text-white">Contact</a>
       </nav>
@@ -101,6 +159,7 @@
     </div>
   </section>
 
+  <!-- Tools Section -->
   <section id="tools" class="py-16 bg-black px-4">
     <div class="container mx-auto">
       <h3 class="text-3xl font-semibold text-center mb-8">Featured AI Tools</h3>
@@ -589,18 +648,18 @@
     </div>
   </section>
 
-  <!-- Articles Section --><!-- Google AdSense Banner Ad -->
-<div class="my-8">
-  <ins class="adsbygoogle"
-       style="display:block; text-align:center;"
-       data-ad-client="ca-pub-4448341022933387"
-       data-ad-slot="1234567890"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-</div>
+  <!-- Articles Section -->
+  <div class="my-8">
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-client="ca-pub-4448341022933387"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
   <section id="articles" class="py-16 bg-gray-900 px-4">
     <div class="container mx-auto text-center">
       <h3 class="text-3xl font-semibold mb-4">Articles & Tutorials</h3>
@@ -608,7 +667,152 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         <a href="articles/getting-started.html" class="block bg-gray-700 rounded-xl p-4 hover:bg-gray-600">
           <h4 class="text-xl font-semibold text-teal-300">Getting Started with AI Tools</h4>
-          <p class="text-gray-300 text-sm">A beginner's guide to navigating and using AI tools on MOVA STUDIO.</p>
+          <p class="text-gray-300 text-sm">A beginner's guide to navigating and using AI tools on MOVA STUDIOHere's a complete article on **"Getting Started with AI"**:
+
+---
+
+# Getting Started with AI: A Beginner’s Guide
+
+Artificial Intelligence (AI) is no longer just a futuristic concept seen in sci-fi movies. Today, it’s part of everyday life—powering virtual assistants like Siri and Alexa, recommending products on Amazon, filtering spam emails, detecting fraud in banking, and even helping create art. If you’re new to the world of AI and wondering where to begin, this guide is for you.
+
+## What is AI?
+
+At its core, **Artificial Intelligence** refers to computer systems designed to mimic human intelligence. This includes learning from data (machine learning), recognizing patterns, understanding language (natural language processing), making decisions, and even perceiving the world (computer vision).
+
+Some common branches of AI include:
+
+* **Machine Learning (ML)**: Teaching computers to learn from data.
+* **Natural Language Processing (NLP)**: Enabling machines to understand and process human language.
+* **Computer Vision**: Allowing computers to interpret and analyze images or videos.
+* **Robotics**: Building smart machines that can carry out tasks in the physical world.
+
+---
+
+## Why Should You Learn AI?
+
+Learning AI opens doors to various opportunities:
+
+* **High-demand jobs** in tech, finance, healthcare, and more.
+* **Innovation potential**: Build smart apps, bots, or automation tools.
+* **Better decision-making**: Use data to drive business strategies.
+* **Stay competitive** in the job market as AI continues to reshape industries.
+
+---
+
+## Step 1: Understand the Basics
+
+Before jumping into coding, take time to understand fundamental AI concepts:
+
+* **What is an algorithm?**
+* **What is data, and why is it important?**
+* **What are supervised and unsupervised learning?**
+* **What is deep learning?**
+
+There are many free online resources for beginners:
+
+* **Coursera**: [AI For Everyone by Andrew Ng](https://www.coursera.org/learn/ai-for-everyone)
+* **Google AI**: [Learn with Google AI](https://ai.google/education/)
+* **YouTube channels**: Like Simplilearn, freeCodeCamp, and AI Explained.
+
+---
+
+## Step 2: Learn Essential Tools and Languages
+
+If you want to build AI models, some technical skills will help you:
+
+* **Programming Languages**: Python is the most popular language for AI thanks to its readability and massive library support.
+
+* **Popular AI Libraries**:
+
+  * **TensorFlow**
+  * **PyTorch**
+  * **Scikit-learn**
+  * **Keras**
+  * **NLTK** (for language processing)
+
+* **Basic Math & Statistics**: Understand linear algebra, probability, and calculus at a beginner level.
+
+If you're not a programmer yet, platforms like **Google Teachable Machine** or **Microsoft Lobe** let you create simple AI models without writing code.
+
+---
+
+## Step 3: Work with Data
+
+AI thrives on data.
+
+* Learn how to **collect**, **clean**, and **analyze** data.
+* Tools like **Excel**, **Google Sheets**, or **Jupyter Notebooks** are great for beginners.
+* Experiment with open datasets like:
+
+  * Kaggle ([https://www.kaggle.com/datasets](https://www.kaggle.com/datasets))
+  * Google Dataset Search ([https://datasetsearch.research.google.com/](https://datasetsearch.research.google.com/))
+
+Understanding how to work with data is crucial for building meaningful AI models.
+
+---
+
+## Step 4: Start Small AI Projects
+
+Begin with small projects like:
+
+* Building a **chatbot**.
+* Creating a **movie recommendation system**.
+* Training a **basic image classifier** (e.g., cat vs. dog images).
+* Automating simple data tasks using **AI APIs** like OpenAI, IBM Watson, or Google Cloud AI.
+
+These small wins will help build your confidence.
+
+---
+
+## Step 5: Explore AI Tools and Platforms
+
+If you're not ready to code, many no-code AI tools let you experiment:
+
+| Tool                     | Purpose                                  |
+| ------------------------ | ---------------------------------------- |
+| Google Teachable Machine | Build simple image/audio models          |
+| ChatGPT                  | Generate text, answer questions          |
+| Runway ML                | AI for creative projects (video, images) |
+| Lobe AI                  | Visual AI model builder                  |
+
+As you get more comfortable, you can graduate to more advanced platforms like **Google Cloud AI**, **Microsoft Azure AI**, or **AWS AI services**.
+
+---
+
+## Step 6: Join AI Communities
+
+AI is constantly evolving. Stay updated and motivated by joining AI communities:
+
+* **Kaggle**
+* **Reddit (r/MachineLearning, r/ArtificialIntelligence)**
+* **LinkedIn AI groups**
+* **OpenAI Discord**
+* **Meetup.com** for local AI meetups
+
+Networking with other learners and professionals will expose you to projects, ideas, and job opportunities.
+
+---
+
+## Step 7: Keep Learning
+
+AI is a field that requires continuous learning. Stay curious:
+
+* Follow AI blogs like Towards Data Science, Medium AI, and Analytics Vidhya.
+* Read research papers on **arXiv.org** if you’re interested in the cutting-edge.
+* Take advanced courses in **Deep Learning**, **Reinforcement Learning**, or **AI Ethics**.
+
+---
+
+## Final Thoughts
+
+Getting started with AI can feel overwhelming at first, but remember: **you don’t need to know everything on day one**. Start with small steps, build projects, and gradually deepen your understanding.
+
+AI is shaping the future, and with curiosity and consistency, you can be part of it.
+
+---
+
+*Ready to start your AI journey? The best time is now.*
+.</p>
         </a>
         <a href="articles/best-ai-creators.html" class="block bg-gray-700 rounded-xl p-4 hover:bg-gray-600">
           <h4 class="text-xl font-semibold text-teal-300">Best AI for Creators</h4>
@@ -620,8 +824,607 @@
         </a>
         <a href="articles/ai-for-business.html" class="block bg-gray-700 rounded-xl p-4 hover:bg-gray-600">
           <h4 class="text-xl font-semibold text-teal-300">AI for Business Automation</h4>
-          <p class="text-gray-300 text-sm">Discover how to automate daily tasks using smart AI platforms.</p>
+          <p class="text-gray-300 text-sm">Here's a complete article on **"Discover How to Automate Daily Tasks Using Smart AI Platforms"**:
+
+---
+
+# Discover How to Automate Daily Tasks Using Smart AI Platforms
+
+In today’s fast-paced world, time is one of the most valuable resources we have. Whether you're managing a business, working remotely, or handling personal projects, staying productive is key. Fortunately, **Artificial Intelligence (AI)** has revolutionized how we can handle repetitive and time-consuming tasks. With the rise of smart AI platforms, automating daily activities has never been easier.
+
+If you’ve ever wished for an extra set of hands—or a digital assistant to do the boring stuff—this article will show you how to get started.
+
+---
+
+## What is AI Task Automation?
+
+**AI task automation** means using artificial intelligence tools and platforms to automatically perform routine jobs that previously required human effort. This includes everything from sending emails and scheduling meetings to managing social media, sorting documents, and even customer support.
+
+Unlike traditional automation tools that follow fixed rules, AI-powered platforms can learn, adapt, and make decisions based on data.
+
+---
+
+## Common Daily Tasks You Can Automate with AI
+
+Here are some everyday activities that AI can handle for you:
+
+| Task                            | AI Tool Example                      |
+| ------------------------------- | ------------------------------------ |
+| Email sorting and smart replies | Gmail with Google AI, Superhuman     |
+| Scheduling meetings             | Calendly, x.ai                       |
+| Social media posting            | Buffer, Hootsuite with AI scheduling |
+| Customer service chats          | ChatGPT API, Intercom, Drift         |
+| Document management             | Google Workspace AI, Notion AI       |
+| Data entry                      | Zapier AI, UiPath                    |
+| Personal reminders              | Siri, Google Assistant, Alexa        |
+| Content generation              | ChatGPT, Jasper AI                   |
+
+---
+
+## Top Smart AI Platforms for Task Automation
+
+Here’s a breakdown of popular AI platforms that make automation easy:
+
+### 1. **Zapier**
+
+* **What it does:** Connects different apps and automates workflows.
+* **Popular automations:** Send Gmail emails when you get a new form response, save new Slack messages to Google Sheets.
+* **No coding required.**
+
+### 2. **IFTTT (If This Then That)**
+
+* **What it does:** Automates tasks between apps, devices, and web services.
+* **Popular automations:** Turn on smart lights at sunset, auto-tweet new blog posts, get weather alerts.
+
+### 3. **ChatGPT by OpenAI**
+
+* **What it does:** Generates text, answers customer queries, creates content.
+* **Use case:** Draft email responses, write blog posts, summarize meeting notes, chatbot integration.
+
+### 4. **Google Workspace AI (Duet AI)**
+
+* **What it does:** Helps with writing, scheduling, summarizing, and generating documents across Google Docs, Gmail, Sheets, and Meet.
+* **Use case:** Draft emails, summarize long threads, auto-create reports.
+
+### 5. **Notion AI**
+
+* **What it does:** Enhances note-taking, task management, and knowledge organization.
+* **Use case:** Auto-summarize meeting notes, generate action plans, rephrase content.
+
+### 6. **Microsoft Copilot (For Office 365)**
+
+* **What it does:** Integrates AI into Word, Excel, Outlook, and Teams.
+* **Use case:** Summarize lengthy documents, generate Excel formulas, draft presentations.
+
+---
+
+## Step-by-Step Guide: How to Automate Your Daily Tasks with AI
+
+### Step 1: Identify Repetitive Tasks
+
+Start by listing tasks you do daily or weekly that feel repetitive. For example:
+
+* Sending similar emails
+* Scheduling calls
+* Copying data between apps
+* Social media posting
+* File organization
+
+### Step 2: Choose the Right AI Tool
+
+Select a platform based on your needs:
+
+* Need workflow automation? → **Zapier or IFTTT**
+* Need writing help? → **ChatGPT or Jasper AI**
+* Managing office work? → **Google Workspace AI or Microsoft Copilot**
+
+### Step 3: Set Up Automations (Also Called “Workflows” or “Zaps”)
+
+Example using Zapier:
+
+* **Trigger:** New email in Gmail
+* **Action:** Auto-save attachment to Google Drive
+* **Bonus:** Send a Slack notification
+
+You don’t need to know coding for most platforms. They use simple drag-and-drop interfaces.
+
+### Step 4: Test and Optimize
+
+Run your automation and check if it performs as expected. AI tools often allow tweaks like:
+
+* Adjusting conditions (e.g., only run for specific contacts)
+* Adding filters
+* Setting frequency and limits
+
+### Step 5: Monitor and Improve
+
+AI learns over time. Check performance weekly:
+
+* Did it save time?
+* Was the task done accurately?
+* Can you automate additional steps?
+
+---
+
+## Benefits of AI Task Automation
+
+| Benefit                  | Explanation                                                    |
+| ------------------------ | -------------------------------------------------------------- |
+| Saves Time               | Focus on important work while AI handles the repetitive stuff. |
+| Reduces Errors           | AI follows instructions accurately and consistently.           |
+| Boosts Productivity      | You get more done in less time.                                |
+| Scales Easily            | Automate multiple tasks across different tools and platforms.  |
+| Enhances Decision Making | Many AI tools analyze data and suggest improvements.           |
+
+---
+
+## Real-Life Example: Automating a Business Workflow
+
+Imagine you run a small online store.
+
+Here’s how you could automate:
+
+1. **New Order Received (Shopify)**
+2. **Zapier triggers:** Add customer info to Google Sheets.
+3. **ChatGPT API:** Auto-generate a thank-you email.
+4. **Slack Notification:** Notify your team about the sale.
+5. **Google Calendar:** Auto-block time for packaging and shipping.
+
+Result: A process that once took 15-30 minutes now happens in seconds.
+
+---
+
+## Tips Before You Automate
+
+* **Start small**: Automate one or two simple tasks first.
+* **Check privacy settings**: Especially when dealing with personal data.
+* **Review performance**: Don’t fully trust AI without testing.
+* **Backup important data**: Mistakes can happen with new workflows.
+
+---
+
+## Final Thoughts
+
+AI task automation is no longer something just for big companies with huge IT budgets. Today, **anyone—from freelancers to small businesses to busy individuals—can automate daily tasks using smart AI platforms**.
+
+By investing a little time upfront to set things up, you’ll free yourself from repetitive work and focus more on creativity, decision-making, and meaningful projects.
+
+**The future of work is smart—and it starts with automation.**
+
+---
+
+*Ready to take control of your time? Explore AI platforms today and let technology do the heavy lifting.*
+.</p>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Website Creation Tutorial Section -->
+  <section id="tutorial" class="py-16 bg-black px-4">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-semibold text-center mb-8 text-teal-400">Website Creation Tutorial</h2>
+      
+      <div class="tutorial-section">
+        <h2>1. Understanding the Basics</h2>
+        
+        <h3>What is HTML?</h3>
+        <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It provides the structure of your website.</p>
+        
+        <h3>What is CSS?</h3>
+        <p>CSS (Cascading Style Sheets) is used to style and layout web pages. It controls the visual presentation of your HTML elements.</p>
+        
+        <div class="tutorial-note">
+          <p><strong>Note:</strong> This tutorial focuses on static websites. For dynamic functionality, you'll need to learn JavaScript or server-side languages like PHP, Python, or Node.js.</p>
+        </div>
+      </div>
+      
+      <div class="tutorial-section">
+        <h2>2. Setting Up Your Development Environment</h2>
+        
+        <p>To build a website, you'll need:</p>
+        <ul>
+          <li>A text editor (VS Code, Sublime Text, Atom, or even Notepad)</li>
+          <li>A web browser (Chrome, Firefox, Safari, or Edge)</li>
+          <li>Optional: Local server software (like XAMPP or MAMP for testing PHP)</li>
+        </ul>
+        
+        <h3>Recommended Setup:</h3>
+        <ol>
+          <li>Download and install <a href="https://code.visualstudio.com/" target="_blank" class="text-teal-400 hover:underline">VS Code</a></li>
+          <li>Install the "Live Server" extension in VS Code for real-time preview</li>
+          <li>Create a project folder for your website</li>
+        </ol>
+      </div>
+      
+      <div class="tutorial-section">
+        <h2>3. Creating Your First HTML File</h2>
+        
+        <p>Follow these steps to create your first webpage:</p>
+        
+        <ol>
+          <li>Open your text editor</li>
+          <li>Create a new file named <code>index.html</code></li>
+          <li>Add the following basic HTML structure:</li>
+        </ol>
+        
+        <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My First Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to My Website!&lt;/h1&gt;
+    &lt;p&gt;This is my first webpage. I'm learning HTML!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+        
+        <ol start="4">
+          <li>Save the file</li>
+          <li>Open it in your web browser by double-clicking the file</li>
+        </ol>
+        
+        <div class="tutorial-note">
+          <p><strong>Tip:</strong> The <code>index.html</code> file is typically the default page that loads when someone visits your website's root directory.</p>
+        </div>
+      </div>
+      
+      <div class="tutorial-section">
+        <h2>4. Understanding HTML Structure</h2>
+        
+        <p>Let's break down the essential HTML elements:</p>
+        
+        <h3>Basic Document Structure</h3>
+        <ul>
+          <li><code>&lt;!DOCTYPE html&gt;</code> - Declares the document type</li>
+          <li><code>&lt;html&gt;</code> - The root element of an HTML page</li>
+          <li><code>&lt;head&gt;</code> - Contains meta information about the document</li>
+          <li><code>&lt;body&gt;</code> - Contains the visible page content</li>
+        </ul>
+        
+        <h3>Common HTML Tags</h3>
+        <ul>
+          <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> - Headings (h1 is most important)</li>
+          <li><code>&lt;p&gt;</code> - Paragraphs</li>
+          <li><code>&lt;a&gt;</code> - Links</li>
+          <li><code>&lt;img&gt;</code> - Images</li>
+          <li><code>&lt;div&gt;</code> - Division or section</li>
+          <li><code>&lt;span&gt;</code> - Inline container</li>
+          <li><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code> - Lists</li>
+        </ul>
+        
+        <h3>Example with Common Elements</h3>
+        <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Sample Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Website Title&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;h2&gt;Article Title&lt;/h2&gt;
+            &lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+            &lt;img src="image.jpg" alt="Description of image"&gt;
+        &lt;/article&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2023 My Website&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+      
+      <div class="tutorial-section">
+        <h2>5. Adding CSS to Your Website</h2>
+        
+        <p>There are three ways to add CSS to your HTML document:</p>
+        
+        <h3>1. Inline Styles (not recommended for most cases)</h3>
+        <pre>&lt;p style="color: blue;"&gt;This text is blue.&lt;/p&gt;</pre>
+        
+        <h3>2. Internal Stylesheet</h3>
+        <pre>&lt;head&gt;
+    &lt;style&gt;
+        p {
+            color: blue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;</pre>
+        
+        <h3>3. External Stylesheet (recommended)</h3>
+        <p>Create a file named <code>styles.css</code> and link it in your HTML:</p>
+        <pre>&lt;head&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;</pre>
+        
+        <p>Then in <code>styles.css</code>:</p>
+        <pre>p {
+    color: blue;
+    font-size: 16px;
+    line-height: 1.5;
+}</pre>
+        
+        <div class="tutorial-note">
+          <p><strong>Best Practice:</strong> Use external stylesheets for better organization and maintainability, especially for larger projects.</p>
+        </div>
+      </div>
+      
+      <div class="tutorial-section">
+        <h2>6. Building a Complete Webpage</h2>
+        
+        <p>Let's create a complete webpage with HTML and CSS:</p>
+        
+        <h3>HTML (index.html)</h3>
+        <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Portfolio&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;div class="container"&gt;
+            &lt;h1&gt;John Doe&lt;/h1&gt;
+            &lt;p&gt;Web Designer &amp; Developer&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+    
+    &lt;nav&gt;
+        &lt;div class="container"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#portfolio"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+    
+    &lt;main class="container"&gt;
+        &lt;section id="about"&gt;
+            &lt;h2&gt;About Me&lt;/h2&gt;
+            &lt;p&gt;I'm a passionate web developer with 5 years of experience...&lt;/p&gt;
+        &lt;/section&gt;
+        
+        &lt;section id="portfolio"&gt;
+            &lt;h2&gt;My Work&lt;/h2&gt;
+            &lt;div class="gallery"&gt;
+                &lt;img src="project1.jpg" alt="Project 1"&gt;
+                &lt;img src="project2.jpg" alt="Project 2"&gt;
+                &lt;img src="project3.jpg" alt="Project 3"&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;div class="container"&gt;
+            &lt;p&gt;&copy; 2023 John Doe. All rights reserved.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+        
+        <h3>CSS (styles.css)</h3>
+        <pre>/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Navigation */
+nav {
+    background-color: #34495e;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    padding: 15px 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+/* Main content */
+main {
+    padding: 40px 0;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}</pre>
+      </div>
+      
+      <div class="tutorial-section">
+        <h2>7. Making Your Website Responsive</h2>
+        
+        <p>Responsive design ensures your website looks good on all devices. Here are key techniques:</p>
+        
+        <h3>Viewport Meta Tag</h3>
+        <pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre>
+        
+        <h3>Fluid Layouts</h3>
+        <p>Use percentages or viewport units instead of fixed widths:</p>
+        <pre>.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}</pre>
+        
+        <h3>Media Queries</h3>
+        <p>Apply different styles based on screen size:</p>
+        <pre>/* Default styles for mobile */
+nav ul {
+    flex-direction: column;
+}
+
+/* Styles for tablets and larger */
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+    }
+}</pre>
+        
+        <h3>Flexbox and Grid</h3>
+        <p>Modern layout techniques that adapt to different screen sizes:</p>
+        <pre>.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}</pre>
+      </div>
+      
+      <div class="tutorial-section">
+        <h2>8. Publishing Your Website</h2>
+        
+        <p>To make your website accessible on the internet, you'll need:</p>
+        
+        <ol>
+          <li><strong>Web Hosting:</strong> Space on a server to store your files
+            <ul>
+              <li>Shared hosting (Bluehost, SiteGround, HostGator)</li>
+              <li>VPS hosting (DigitalOcean, Linode)</li>
+              <li>Static site hosting (Netlify, Vercel, GitHub Pages)</li>
+            </ul>
+          </li>
+          <li><strong>Domain Name:</strong> Your website's address (example.com)
+            <ul>
+              <li>Register with providers like Namecheap, Google Domains, or GoDaddy</li>
+            </ul>
+          </li>
+        </ol>
+        
+        <h3>Uploading Your Files</h3>
+        <p>Typically done via:</p>
+        <ul>
+          <li>FTP (FileZilla, Cyberduck)</li>
+          <li>Hosting provider's file manager</li>
+          <li>Git (for more advanced workflows)</li>
+        </ul>
+        
+        <div class="tutorial-note">
+          <p><strong>Free Option:</strong> GitHub Pages allows you to host static websites for free by simply pushing your code to a GitHub repository.</p>
+        </div>
+      </div>
+      
+      <div class="tutorial-section">
+        <h2>9. Next Steps in Your Web Development Journey</h2>
+        
+        <p>After mastering HTML and CSS, consider learning:</p>
+        
+        <h3>JavaScript</h3>
+        <p>Adds interactivity to your websites. Start with vanilla JS before frameworks.</p>
+        
+        <h3>CSS Preprocessors</h3>
+        <p>Sass or Less can make your CSS more maintainable.</p>
+        
+        <h3>Frontend Frameworks</h3>
+        <p>React, Vue, or Angular for building complex web applications.</p>
+        
+        <h3>Backend Development</h3>
+        <p>Node.js, PHP, Python, or Ruby to create dynamic, database-driven websites.</p>
+        
+        <h3>Version Control</h3>
+        <p>Git and GitHub for tracking changes and collaborating with others.</p>
+      </div>
+      
+      <div class="tutorial-section">
+        <h2>10. Resources for Further Learning</h2>
+        
+        <ul>
+          <li><a href="https://developer.mozilla.org/en-US/" target="_blank" class="text-teal-400 hover:underline">MDN Web Docs</a> - Comprehensive web development documentation</li>
+          <li><a href="https://www.freecodecamp.org/" target="_blank" class="text-teal-400 hover:underline">freeCodeCamp</a> - Free coding curriculum</li>
+          <li><a href="https://css-tricks.com/" target="_blank" class="text-teal-400 hover:underline">CSS-Tricks</a> - Excellent CSS resources</li>
+          <li><a href="https://www.w3schools.com/" target="_blank" class="text-teal-400 hover:underline">W3Schools</a> - Beginner-friendly tutorials</li>
+          <li><a href="https://www.codecademy.com/" target="_blank" class="text-teal-400 hover:underline">Codecademy</a> - Interactive coding lessons</li>
+          <li><a href="https://www.udemy.com/" target="_blank" class="text-teal-400 hover:underline">Udemy</a> - Affordable in-depth courses</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -649,7 +1452,7 @@
   </section>
 
   <footer class="bg-gray-950 text-center text-gray-400 py-6 text-sm">
-    <p>&copy; 2025 MOVA STUDIO. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> MOVA STUDIO. All rights reserved.</p>
   </footer>
 
   <!-- Modal -->
@@ -727,6 +1530,9 @@
 
     searchInput.addEventListener('input', filterTools);
     categoryFilter.addEventListener('change', filterTools);
+
+    // Simple script to display current year
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
